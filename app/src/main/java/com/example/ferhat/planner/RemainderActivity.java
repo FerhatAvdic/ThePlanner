@@ -1,16 +1,12 @@
 package com.example.ferhat.planner;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.ContentValues;
-import android.content.DialogInterface;
-import android.database.sqlite.SQLiteDatabase;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
-
-import com.example.ferhat.planner.db.TaskContract;
 
 
 public class RemainderActivity extends Activity {
@@ -18,7 +14,20 @@ public class RemainderActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.remainders);
+
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        RemaindersListFragment fragment1 = new RemaindersListFragment();
+        Log.i("msg", "before transaction");
+        fragmentTransaction.add(R.id.remlist, fragment1);
+        fragmentTransaction.commit();
+        Log.i("msg", "after transaction");
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
