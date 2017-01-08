@@ -35,7 +35,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
                         android:ems="10"
-                        android:id="@+id/editText8"
+                        android:id="@+id/notif_Content"
                         android:textColor="@color/colorPrimaryDark" />
 
                     <TextView
@@ -50,7 +50,7 @@
                     <TimePicker
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/timePicker2"
+                        android:id="@+id/notif_time"
                         android:numbersSelectorColor="@color/colorPrimary"
                         android:headerBackground="@color/colorPrimaryDark" />
 
@@ -66,20 +66,20 @@
                     <DatePicker
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/datePicker2"
+                        android:id="@+id/notif_date"
                         android:layout_weight="0.84" />
 
                     <Button
                         android:text="Finish"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button" />
+                        android:id="@+id/notif_finish" />
 
                     <Button
                         android:text="Cancel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/button2" />
+                        android:id="@+id/notif_cancel" />
             </LinearLayout>
 
 

@@ -8,8 +8,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import static android.R.attr.fragment;
+
 
 public class RemainderActivity extends Activity {
+    private RemaindersListFragment fragment1 = new RemaindersListFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,11 +22,8 @@ public class RemainderActivity extends Activity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        RemaindersListFragment fragment1 = new RemaindersListFragment();
-        Log.i("msg", "before transaction");
         fragmentTransaction.add(R.id.remlist, fragment1);
         fragmentTransaction.commit();
-        Log.i("msg", "after transaction");
     }
 
 
@@ -39,7 +39,6 @@ public class RemainderActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add_task:
-
 
                 return true;
 
